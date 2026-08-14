@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprender com a Tecnologia</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            margin: 0;
+        }
+
+        header {
+            background: #1565c0;
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        button {
+            display: block;
+            width: 90%;
+            max-width: 400px;
+            margin: 15px auto;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background: #1976d2;
+            color: white;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background: #0d47a1;
+        }
+
+        #conteudo {
+            margin: 20px auto;
+            max-width: 500px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        a {
+            color: #1565c0;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Aprender com a Tecnologia</h1>
+    <p>Use a internet para aprender e melhorar seus conhecimentos.</p>
+</header>
+
+<div class="container">
+
+    <button onclick="mostrar('cursos')">
+        📚 Aprender pela Internet
+    </button>
+
+    <button onclick="mostrar('videos')">
+        🎥 Vídeos e Tutoriais
+    </button>
+
+    <button onclick="mostrar('dicas')">
+        💡 Dicas de Tecnologia
+    </button>
+
+    <div id="conteudo">
+        <p>Escolha uma opção acima.</p>
+    </div>
+
+</div>
+
+<script>
+
+function mostrar(opcao) {
+
+    let conteudo = document.getElementById("conteudo");
+
+    if (opcao == "cursos") {
+        conteudo.innerHTML = `
+            <h2>Aprender pela Internet</h2>
+            <p>
+                A internet possui diversos cursos
+                para aprender coisas novas.
+            </p>
+
+            <a href="https://icamericana.com.br/" target="_blank">
+                Acessar cursos
+            </a>
+        `;
+    }
+
+    if (opcao == "videos") {
+        conteudo.innerHTML = `
+            <h2>Vídeos e Tutoriais</h2>
+            <p>
+                O YouTube possui vídeos sobre construção,
+                ferramentas, máquinas e diversas outras áreas de maneira gratuita.
+            </p>
+
+            <a href="https://www.youtube.com/" target="_blank">
+                Acessar YouTube
+            </a>
+        `;
+    }
+
+    if (opcao == "dicas") {
+        conteudo.innerHTML = `
+            <h2>Dicas de Tecnologia</h2>
+
+            <p>
+                🔎 Use o Google para pesquisar assuntos
+                que você deseja aprender.
+            </p>
+
+            <p>
+                🎥 Utilize vídeos para aprender novas técnicas.
+            </p>
+
+            <p>
+                📱 Utilize aplicativos para organizar
+                informações e aprender.
+            </p>
+
+            <p>
+                ✅ Procure informações em fontes confiáveis.
+            </p>
+        `;
+    }
+}
+
+</script>
+
+</body>
+</html>
